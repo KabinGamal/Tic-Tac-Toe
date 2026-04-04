@@ -29,3 +29,16 @@ button.forEach((box)=>{
     });
 });
 
+const checkWinner=()=>{
+    for(let pattern of winConditions){
+        let pos1=button[pattern[0]].innerText;
+        let pos2=button[pattern[1]].innerText;
+        let pos3=button[pattern[2]].innerText;
+        if(pos1 !="" && pos2!="" && pos3!=""){
+            if(pos1==pos2 && pos2==pos3){
+                showWinner(pos1);
+            }
+        }
+    }
+}
+
