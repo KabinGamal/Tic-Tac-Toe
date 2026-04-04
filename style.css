@@ -1,6 +1,46 @@
-.cointainer{
-    text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.hide{
-    display:none;
+body{
+    background-color: #B6AE9F;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+.game{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height:600px;
+    width:600px;
+
+    border-radius: 10px;
+}
+.box{
+    height:200px;
+    width:200px;
+    border-radius: 10px;
+    border:0.5px solid black;
+    background-color: #FBF3D1;
+}
+.title{
+    font-size: 45px;
+    border-bottom: 2px solid black;
+}
+.reset{
+    height:50px;
+    width:50px;
+    margin-left:500px;
+    margin-bottom:3px;
+    font-size: 30px;
+    border-radius: 5px;
+    background-color: #FBF3D1;
 }
