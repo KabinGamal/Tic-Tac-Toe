@@ -7,6 +7,7 @@ body{
     background-color: #B6AE9F;
 }
 .container{
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,6 +31,7 @@ body{
     border-radius: 10px;
     border:0.5px solid black;
     background-color: #FBF3D1;
+    font-size: 100px;
 }
 .title{
     font-size: 45px;
@@ -43,4 +45,22 @@ body{
     font-size: 30px;
     border-radius: 5px;
     background-color: #FBF3D1;
+}
+
+.msg_cont{
+    text-align: center;
+}
+.msg{
+    font-size: 50px;
+}
+.play_again{
+    height:50px;
+    width:150px;
+    font-size: 30px;
+    border-radius: 5px;
+    background-color: #FBF3D1;
+    border: none;
+}
+.hide{
+    display: none;
 }
