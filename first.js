@@ -15,3 +15,17 @@ const winConditions=[
     [6,7,8],
 ];
 
+button.forEach((box)=>{
+    box.addEventListener("click",()=>{
+        if(turnO){
+            box.innerText="O";
+            turnO=false;
+        }else{
+            box.innerText="X";
+            turnO=true;
+        }
+        box.disabled=true;
+        checkWinner();
+    });
+});
+
