@@ -42,3 +42,7 @@ const checkWinner=()=>{
     }
 }
 
+const showWinner=(winner)=>{
+    msg.innerText=`congratulations \n ${winner} wins!`;
+    msg_cont.classList.remove("hide");
+}
