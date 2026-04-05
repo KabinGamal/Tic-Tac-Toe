@@ -1,6 +1,6 @@
 let button = document.querySelectorAll(".box");
 let msg = document.querySelector(".msg");
-let msg_cont = document.querySelector(".msg-cont");
+let msg_cont = document.querySelector(".msg_cont");
 let turnO =true;
 
 
@@ -34,15 +34,21 @@ const checkWinner=()=>{
         let pos1=button[pattern[0]].innerText;
         let pos2=button[pattern[1]].innerText;
         let pos3=button[pattern[2]].innerText;
-        if(pos1 !="" && pos2!="" && pos3!=""){
-            if(pos1==pos2 && pos2==pos3){
-                showWinner(pos1);
-            }
-        }
+
+        if(pos1!="" && pos1==pos2 && pos2==pos3){
+            disableBox();
+            showWinner(pos1);
+
+    
     }
 }
-
+}
 const showWinner=(winner)=>{
-    msg.innerText=`congratulations \n ${winner} wins!`;
     msg_cont.classList.remove("hide");
+    msg.innerText=`Congrulations! \n ${winner} wins the game.`
+}
+const disableBox=()=>{
+    for (let box of button){
+        box.disabled=true;
+    }
 }
