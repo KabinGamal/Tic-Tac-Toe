@@ -7,12 +7,13 @@ body{
     background-color: #B6AE9F;
 }
 .container{
-    margin-top: 50px;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+
     
 }
 .game{
@@ -48,7 +49,13 @@ body{
 }
 
 .msg_cont{
+    height:100vmin;
     text-align: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
 }
 .msg{
     font-size: 50px;
@@ -59,7 +66,7 @@ body{
     font-size: 30px;
     border-radius: 5px;
     background-color: #FBF3D1;
-    border: none;
+    border: 1px solid black;
 }
 .hide{
     display: none;

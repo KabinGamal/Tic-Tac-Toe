@@ -1,7 +1,9 @@
 let button = document.querySelectorAll(".box");
 let msg = document.querySelector(".msg");
 let msg_cont = document.querySelector(".msg_cont");
+let reset = document.querySelector(".reset");
 let turnO =true;
+let playAgain=document.querySelector(".play_again");
 
 
 const winConditions=[
@@ -29,6 +31,12 @@ button.forEach((box)=>{
     });
 });
 
+const resetGame=()=>{
+    turnO=true;
+    enableBox();
+    msg_cont.classList.add("hide");
+
+}
 const checkWinner=()=>{
     for(let pattern of winConditions){
         let pos1=button[pattern[0]].innerText;
@@ -46,9 +54,18 @@ const checkWinner=()=>{
 const showWinner=(winner)=>{
     msg_cont.classList.remove("hide");
     msg.innerText=`Congrulations! \n ${winner} wins the game.`
+    
 }
 const disableBox=()=>{
     for (let box of button){
         box.disabled=true;
     }
 }
+const enableBox=()=>{
+    for (let box of button){
+        box.disabled=false;
+        box.innerText="";
+    }
+}
+reset.addEventListener("click",resetGame);
+playAgain.addEventListener("click",resetGame);
